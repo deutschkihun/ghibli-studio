@@ -4,7 +4,7 @@ import express from 'express';
 import http from 'http';
 import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
-import { FilmResolver } from './resolver/Film';
+import { FilmResolver } from './resolvers/Film';
 
 async function main() {
   const app = express();
