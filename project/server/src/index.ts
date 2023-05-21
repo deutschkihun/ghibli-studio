@@ -4,10 +4,12 @@ import express from 'express';
 import http from 'http';
 import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
+import { createDB } from './db/db-client';
 import { CutResolver } from './resolvers/Cut';
 import { FilmResolver } from './resolvers/Film';
 
 async function main() {
+  await createDB();
   const app = express();
 
   const apolloServer = new ApolloServer({
@@ -36,3 +38,5 @@ async function main() {
 }
 
 main().catch((err) => console.error(err));
+
+// p 168
