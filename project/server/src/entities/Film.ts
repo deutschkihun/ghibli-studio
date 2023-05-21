@@ -1,4 +1,4 @@
-// project/server/src/entities/Film.ts
+/* eslint-disable camelcase */
 
 import { Field, Int, ObjectType } from 'type-graphql';
 
